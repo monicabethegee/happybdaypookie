@@ -221,7 +221,7 @@ function submitPassword() {
 
   if (password === "moromou") {
     alert("Access granted!");
-    window.location.href = "homepage.html";
+   window.location.href = "homepage.html";
   } else {
     alert("Incorrect password. Hint: It's a nickname, in Greek, all lowercase & no spaces");
     document.getElementById("passwordInput").value = "";
