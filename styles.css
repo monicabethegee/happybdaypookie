@@ -1,0 +1,511 @@
+/*Pookie bear's bday website CSS - made with love*/
+
+/*Landing page -- DO NOT TOUCH ANYTHING BEFORE CONTAINER*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #dfdfea;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+  color: #b87aff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+-moz-animation: fadein 2s; /* Firefox < 16 */
+-ms-animation: fadein 2s; /* Internet Explorer */
+-o-animation: fadein 2s; /* Opera < 12.1 */
+animation: fadein 2s;
+}
+
+/*Enter button*/
+
+#enterButton {
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 0px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#enterButton:hover {
+   background-color: #dfdfea;
+}
+
+/*Modal base style*/
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+/* When modal is visible */
+ 
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Resize & center the carousel inside the modal */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* space between image and buttons */
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.carousel-image-wrapper {
+  max-width: 500px;
+  max-height: 5050px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+input[type="password"] {
+  padding: 8px;
+  margin-top: 10px;
+  width: 80%;
+}
+
+#submitPassword {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #cccccc;
+  color: black;
+  border:none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitPassword:hover{
+  background-color: #dfdfea;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*Index container*/
+.icontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.description {
+  position: relative;
+  display: block;
+  align-items: center;
+  word-wrap: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 15px; /* Adjust padding as needed */
+  margin-top: 5px;
+  margin-left: 75px;
+  width: 500px;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/*Navigation*/
+
+nav {
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 25px;
+  width: 100%;
+  max-width: 450px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav a {
+  color: #b87aff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+.iimg {
+  position: absolute;
+  margin-left: 350px;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+/*Music player*/
+
+.music-container {
+  margin-left: 720px;
+  margin-top: 160px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  padding: 20px 30px;
+  position: relative;
+  width: 400px;
+  z-index: 10;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.img-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.musicnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background-color: white;
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  padding: 10px 10px 10px 150px;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-info h4 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.progress-container {
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #b87aff;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+
+
+/*ANIMATIONS + KEYFRAMES */
+
+/*Rotate image*/
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* FADE IN ANIMATION*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*MOBILE, TABLET, AND DESKTOP RESPONSE DO NOT DELETE */
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 100px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .description {
+    width: 90%;
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  nav {
+    margin-top: 200px;
+    margin-left: 0;
+    max-width: 90%;
+    font-size: 16px;
+  }
+
+  .iimg {
+    position: static;
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+  }
+
+  .music-container {
+    flex-direction: column;
+    margin: 60px auto 0;
+    width: 90%;
+    align-items: center;
+  }
+
+  .music-info {
+    padding-left: 130px;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carousel-image-wrapper {
+    max-width: 90%;
+  }
+}
+
+/* Phones (480px and down) */
+@media (max-width: 480px) {
+  h1 {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #enterButton {
+    margin-top: 250px;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    padding: 10px 14px;
+  }
+
+  input[type="password"] {
+    width: 95%;
+  }
+
+  #submitPassword {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .music-info h4 {
+    font-size: 10px;
+  }
+
+  .img-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 6px;
+  }
+}

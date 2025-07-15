@@ -1,0 +1,120 @@
+<!--Index page - made with love -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Happy birthday baby!</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA8k6iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAABERAAAAAAABEREQAAAAABEREREAAAABERERERAAABEREREREQABEREREREREAEREREREREQARERERERERABEREQAREREAAREQAAEREAAAEQAAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/PwAA/h8AAPwPAAD4BwAA8AMAAOABAADAAAAAwAAAAMAAAADAwAAA4eEAAPPzAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+        <!--h1, outside of container div-->
+        <h1>happy birthday, <i>baby</i> !</h1>
+
+        <!--img div -->
+        <div class="iimg">
+                <img src="img/download.jpg" width="350px" height="550px">
+            </div>            
+
+        <!-- Container div-->
+        <div class="icontainer">
+            <div class="description">
+                On the 16th of July, 2002 - a starboy was born! Alex, my love - you are my favorite person in this whole wide world. I could listen to you talk
+                    about cars, games, and all the random things in between <i>forever.</i> You're the brightest spark, the kindest heart, and the silliest,
+                sweetest, gentle soul.
+                You mean everything to me, you are my heartbeat in human form. I'm so lucky to love you and be loved by you.
+                I hope today brings you joy, laughter, and the start of even bigger dreams coming true!
+                I love you so deeply, pookie bear.
+            </div>
+            <!-- Navigation-->
+            <nav>
+                 <a href="#" id="memoriesLink">memories</a>
+                <a href="#" id="listLink">list</a>
+            </nav>
+        </div>
+
+        <!--Memories modal-->
+<div id="memoriesModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeMemories">&times;</span>
+        <h2>memories with you</h2>
+        <p>all of my favorite memories with you. (we don't have any minecraft or league moments together)</p>
+
+        <!--Carousel moved inside the modal-->
+       <div class="carousel">
+  <button class="carousel-btn mprev-btn">&#10094;</button>
+
+  <div class="carousel-image-wrapper">
+    <img id="carousel-image" src="img/screenshots/1.png" alt="Memory" />
+  </div>
+
+  <button class="carousel-btn mnext-btn">&#10095;</button>
+</div>
+    </div>
+</div>
+
+<!-- The list modal-->
+<div id="listModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeList">&times;</span>
+        <h2>there's so much to love about you</h2>
+       <ul>
+        <li>I love your laugh</li>
+        <li>I love reading your good morning messages</li>
+        <li>I love your random tangents</li>
+        <li>I love getting notifications from you</li>
+        <li>I love playing League with you</li>
+        <li>I love playing Minecraft with you</li>
+        <li>I love it when you give me diamonds</li>
+        <li>I love seeing your picture on my lockscreen</li>
+        <li>I love how bright and intelligent you are</li>
+        <li>I love listening to you talk about cars</li>
+        <li>I love your sense of humor</li>
+        <li>I love your personality</li>
+        <li>I love how calm & collected you are</li>
+        <li>I love how you respect me</li>
+        <li>I love how you love me</li>
+       </ul>
+       <p><i>I love you</i></p>
+    </div>
+</div>
+
+
+        <!-- Music player-->
+        <div class="music-container">
+            <div class="music-info">
+                <h4 id="title">Baby Be Mine - Michael Jackson</h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <audio src="music/Michael Jackson - Baby Be Mine (Audio).mp3" id="audio"></audio>
+
+            <div class="img-container">
+                <img alt="music-cover" id="cover"/>
+            </div>
+
+            <div class="musicnav">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+        
+      <!--JavaScript, do not remove-->
+        <script src="script.js"></script>
+    </body>
+</html>
